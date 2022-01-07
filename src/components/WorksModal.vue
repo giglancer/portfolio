@@ -59,7 +59,7 @@
         <!-- slider -->
         <div class="content__inner__slider">
           <slick ref="slick" :options="slickOptions" class="slick-outer">
-            <!-- v-forとslickは同時に私用できないみたい -->
+            <!-- v-forとslickは同時に使用できないみたい -->
             <div><img :src="value.images[0]" class="slick-img" /></div>
             <div><img :src="value.images[1]" class="slick-img" /></div>
             <div><img :src="value.images[2]" class="slick-img" /></div>
@@ -183,8 +183,11 @@ export default {
     width: 100%;
     text-align: right;
     &__img {
-      height: 2rem;
-      width: 2rem;
+      height: auto;
+      width: 100%;
+      max-height: 2rem;
+      max-width: 2rem;
+      object-fit: contain;
       margin: 1rem;
     }
   }
