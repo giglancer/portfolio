@@ -62,7 +62,10 @@
             <!-- v-forとslickは同時に使用できないみたい -->
             <div><img :src="value.images[0]" class="slick-img" /></div>
             <div><img :src="value.images[1]" class="slick-img" /></div>
-            <div><img :src="value.images[2]" class="slick-img" /></div>
+            <div>
+              <img
+              :src="value.images[2]" class="slick-img" />
+            </div>
           </slick>
         </div>
       </div>
@@ -221,7 +224,8 @@ export default {
       display: inline;
       margin: 1rem;
       width: 90%;
-      height: 40vw;
+      height: 100%;
+      max-height: 40vw;
       object-fit: cover;
     }
     .slick-outer {
